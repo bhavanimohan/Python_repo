@@ -52,3 +52,5 @@ a = ["my", "name", "is", "mohan"]
 b = "".join(a)[8:14].upper()  #join() method is used to join the elements of a list into a single string, with a specified separator between each element. In this case, the separator is a space.
 
 print(b)  #join() method is used to join the elements of a list into a single string, with a specified separator between each element. In this case, the separator is a space.
+b = "nani"
+print(b.swapcase())
