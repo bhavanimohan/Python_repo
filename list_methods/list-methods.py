@@ -45,5 +45,5 @@ print(c)
 # print(a.count(3))  
 # print(a[4])
 
-# b = "nani"
-# print(b.swapcase())
+
+
