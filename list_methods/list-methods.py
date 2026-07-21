@@ -30,6 +30,8 @@ print(a.clear())
 
 b=a.copy() #this method returns a shallow copy of the list
 print(b)
+
+
 c=[3,5,2,1,4]
 # a.reverse() #this method reverses the list
 print(c.reverse())
