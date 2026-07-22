@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # a =input()
 # b = input()
 # c= int(input())
@@ -22,7 +21,6 @@ native = input()
 cgpa = input()
 print(f"Hello This is {name}. I'm from {native}. I had completed my studies in {stream} from {clg} with an cpga of{cgpa}.")
 
-=======
 
 a = "mohan"
 # print(a[:-4:-1])
@@ -74,4 +72,3 @@ a = ["my", "name", "is", "mohan"]
 b = "".join(a)[8:14].upper()  #join() method is used to join the elements of a list into a single string, with a specified separator between each element. In this case, the separator is a space.
 
 print(b)  #join() method is used to join the elements of a list into a single string, with a specified separator between each element. In this case, the separator is a space.
->>>>>>> e9e364a25e4cd01d36ad8f03282777713a08f661
