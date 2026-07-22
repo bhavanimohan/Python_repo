@@ -58,4 +58,4 @@ print(a.strip())
 print(a.upper())
 
 a= {"nani","sai","mom"}
-print(a.pop({"nani"}))
+print(a.popitem("nani"))
