@@ -99,7 +99,7 @@ print("nani" not in a)
 a ="hello"
 b =""
 c ="nani"
-print(a is b)
+print(a is c)
 
 
 
