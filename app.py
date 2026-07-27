@@ -24,35 +24,35 @@
 #     print("not  number")
 
 a=int(input())
-is_voter_ID = input()
-is_indian = input()
+(is_indian) = input()
+(is_voter_ID) = input()
 
-# if(a>=18):
-#     if(bool(is_indian) == True):
-#         if(bool(is_voter_ID)==True):
-#             print("Eligible to vote")
-#         else:
-#             print("Not eligible to vote bcz of voter_ID")
-        
-#     else:
-#         print("not eligible to vote bcz of not an indian")
-# else:
-#     print("Not eligible to vote")
-    
-    
-    
-        
+
 if(a>=18):
-    print("eligible to vote")
-else:
-    print(" not eligible to vote")
+    if((is_indian == "Yes")):
+        if((is_voter_ID == "Yes")):
+            print("Eligible to vote")
+        else:
+            print("Not eligible to vote bcz of voter_ID")
+    else:
+        print("not eligible to vote bcz of not an indian")
+else: 
+    print("Not eligible to vote")
+    
+    
+    
         
-if(bool(is_indian == True)):
-    print("eligible to vote")
-else:
-    print(" not eligible to vote bcz of bcz of not an indian")
+# if(a>=18):
+#     print("eligible to vote")
+# else:
+#     print(" not eligible to vote")
         
-if(bool(is_voter_ID == True)):
-    print("eligible to vote")
-else:
-    print(" not eligible to vote bcz of not having voter id")
+# if(bool(is_indian == True)):
+#     print("eligible to vote")
+# else:
+#     print(" not eligible to vote bcz of bcz of not an indian")
+        
+# if(bool(is_voter_ID == True)):
+#     print("eligible to vote")
+# else:
+#     print(" not eligible to vote bcz of not having voter id")
