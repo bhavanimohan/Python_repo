@@ -39,3 +39,5 @@
 # for char in range(1,a+1):
 #     print(letters[:char])
 
+a = int(input())
+print(a)
