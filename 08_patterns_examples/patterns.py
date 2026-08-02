@@ -39,6 +39,12 @@
 # for char in range(1,a+1):
 #     print(letters[:char])
 
-a = "Hello World"
-while len(a)>0:
-    print(a)
+# a = "Hello World"
+# while len(a)>0:
+#     print(a)
+
+a = int(input("Enter the number: "))
+for char in range(1,a+1):
+    print("/ "*char)
+    
+    
