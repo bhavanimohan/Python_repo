@@ -43,8 +43,8 @@
 # while len(a)>0:
 #     print(a)
 
-a = int(input("Enter the number: "))
-for char in range(1,a+1):
-    print("/ "*char)
+# a = int(input("Enter the number: "))
+# for char in range(1,a+1):
+#     print("/ "*char)
     
     
