@@ -231,12 +231,94 @@
         
 # Implement a countdown timer from 10 to 1 using a while loop that prints "Liftoff!" once the countdown
 # reaches 0.
-a = int(input("Enter the number : "))
-count = 0
-while(a>0):
-    if(a>0):
-        print(a)
-        a-=1
-else:
-    print("Liftoff!!!!")
+# a = int(input("Enter the number : "))
+# count = 0
+# while(a>0):
+#     if(a>0):
+#         print(a)
+#         a-=1
+# else:
+#     print("Liftoff!!!!")
     
+# Given the list [5, 3, 5, 8, 5, 2], use a while loop (with an index and the list's remove/pop, no slicing or list
+# comprehension) to remove all occurrences of the value 5.
+
+# a = [5, 3, 5, 8, 5, 2]
+# b = int(input("Enter the number : "))
+# c = []
+# count = 0
+# while(count<len(a)):
+#     if(a[count] ==  b ):
+#         count+=1
+#         continue
+#     else:
+#         c.append(a[count])
+#         count+=1
+        
+# print(c)
+
+# Using a while loop with a pass statement as a placeholder for numbers divisible by 4, print every other
+# number from 1 to 20 (i.e. do nothing special for multiples of 4, print the rest).
+
+# a = int(input("Enter the numberr : "))
+# b = int(input("Enter the range : "))
+# count = 1
+# while(count<b+1):
+#     if(a % count  == 0):
+#         count+=1
+#         pass
+#     else:
+#         print(count)
+#         count+=1
+#  Build a simple menu-driven calculator using a while True loop. Simulate the menu choices with the list
+# ["add", "subtract", "multiply", "exit"] and use break to end the loop when "exit" is selected.
+
+
+# b = input("Select what you want to do now : -   ADD | SUBTRACT | MULTIPLY | EXIT : -")
+
+# flag = True
+# while flag:
+#     if(b == "add"):
+#         first = int(input("Enter the number : "))
+#         second = int(input("Enter the number :  "))
+#         operation = input("Enter the operation : ")
+#         print(f" {first} + {second} = {first+second}")
+#         b = input("Select what you want to do now : -   ADD | SUBTRACT | MULTIPLY | EXIT ")
+        
+#     if(b == "subtract"):
+#             first = int(input("Enter the number : "))
+#             second = int(input("Enter the number :  "))
+#             operation = input("Enter the operation : ")
+#             print(f" {first} - {second} = {first-second}")
+#             b = input("Select what you want to do now : -   ADD | SUBTRACT | MULTIPLY | EXIT ")
+#     if(b == "mutliply"):
+#             first = int(input("Enter the number : "))
+#             second = int(input("Enter the number :  "))
+#             operation = input("Enter the operation : ")
+#             print(f" {first} * {second} = {first*second}")
+#             b = input("Select what you want to do now : -   ADD | SUBTRACT | MULTIPLY | EXIT ")
+#     if(b == "exit"):
+#             flag = False
+#             break
+
+# 27. Use nested while loops to print a pyramid pattern of stars with 5 rows:
+# *
+# ***
+# *****
+# *******
+# *********
+
+a = int(input("Enter the number : "))
+count =1
+while(a>0):
+    if(count % 2 != 0 ):
+        her = (a-count) // 2
+        
+        spaces = " " * her
+        star = "*" * count
+    print(spaces+star)
+    a-=1
+    count+=1
+    
+
+
