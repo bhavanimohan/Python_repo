@@ -34,14 +34,30 @@
 
 def my_average(*a):
     print(f"values : {a}")
-    count = 0
-    countss =0
+    count = countss = 0
     for char in a:
         count+=char
         countss+=1
     print(count/countss)
-        
-
-
-  
 my_average(1,2)
+
+def my_sum(*a):
+    count = 0
+    for char in a:
+        count+=char
+    return count
+
+def my_len(*a):
+    countss = 0
+    for char in a:
+        countss+=1
+    return countss
+
+def my_average(*a):
+    b = my_sum(*a)
+    c = my_len(*a)
+    print(b/c)
+    
+my_average(1,2)
+    
+    
