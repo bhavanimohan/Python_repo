@@ -308,17 +308,67 @@
 # *******
 # *********
 
-a = int(input("Enter the number : "))
-count =1
-while(a>0):
-    if(count % 2 != 0 ):
-        her = (a-count) // 2
+# a = int(input("Enter the number : "))
+# count =1
+# while(a>0):
+#     if(count % 2 != 0 ):
+#         her = (a-count) // 2
         
-        spaces = " " * her
-        star = "*" * count
-    print(spaces+star)
-    a-=1
-    count+=1
+#         spaces = " " * her
+#         star = "*" * count
+#     print(spaces+star)
+#     a-=1
+#     count+=1
+
+# num=int(input("Enter the number of rows : "))
+# i=0
+# while i<num:
+#     j=i
+#     while j<num:
+#         print(" ",end=" ")
+#         j+=1
+#     j=1
+#     while j<i+1:
+#         print("*",end=" ")
+#         j+=1
+#     j=2
+#     while j<i+1:
+#         print("*",end=" ")
+#         j+=1
+#     print()
+#     i+=1
+
+# #29
+# cnt=0
+# while cnt<3:
+#     num=int(input("Enter ATM pin :"))
+#     if num==4521:
+#         print("Done ")
+#         break
+#     else:
+#         print("wrong pin")
+#     cnt+=1
+
+# else:
+#     print("Access denied")
+
+# #30
+# list_1=[15, 22, 8, 19, 31, 4, 27]
+# target=40
+# flag=True
+# i=j=0
+# while i<len(list_1) and flag:
+#     a=list_1[i]
+#     j=i+1
+#     while j<len(list_1) and flag:
+#         b=list_1[j]
+#         if (a+b)>=target:
+#             flag=False
+#             print(f"First pair :{a},{b}")
+#             break
+#         j+=1
+#     i+=1
     
+
 
 
