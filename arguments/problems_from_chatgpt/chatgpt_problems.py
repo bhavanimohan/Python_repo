@@ -173,13 +173,107 @@
 # shopping_cart("Bhavani", 100, 250, 50, 300)
     
 #Employee Salary ⭐⭐
-def sums(*nums):
-    total = 0
-    for char in nums:
-        total+=char
-    return total
-def employee_salary(name,*nums):
-    print(f"Name : {name}")
-    b = sums(*nums)
-    print(f"Final salary : {b}")
-employee_salary("Bhavani", 30000, 2000, 1500, 1000)
+# def sums(*nums):
+#     total = 0
+#     for char in nums:
+#         total+=char
+#     return total
+# def employee_salary(name,*nums):
+#     print(f"Name : {name}")
+#     b = sums(*nums)
+#     print(f"Final salary : {b}")
+# employee_salary("Bhavani", 30000, 2000, 1500, 1000)
+
+#=========================Level 6 — Challenge Problems==============================
+
+def calculator(operation, *numbers):
+    if operation == "+":
+        count = 0
+        for char in numbers:
+            count+=char
+        return count
+    elif operation == "-":
+        count = 0
+        for char in numbers:
+            count=char-count
+        return count
+    elif operation == "*":
+        count = 1
+        for char in numbers:
+            count=char*count
+        return count
+    else:
+        count = 1        
+        for char in numbers:
+            count= char/count
+        return count
+print(calculator("/",2,3,4))
+
+            
+#Personal Introduction ⭐⭐⭐
+# def introduce(name, age, city="Hyderabad", *skills):
+#     print(f"Name : {name}")
+#     print(f"Age : {age}")
+#     print(f"City : {city}")
+#     print(f"Skills : {skills}")
+    
+# introduce("Nani", 22, "Vijayawada", "HTML","CSS")
+
+
+#Marks Analyzer ⭐⭐⭐
+
+# def my_total(*marks):
+#     total = 0
+#     for char in marks:
+#         total+=char
+#     return total
+
+# def my_count(*marks):
+#     count = 0
+#     for char in marks:
+#         count+=1
+#     return count
+
+# def my_average(*marks):
+#     b = my_total(*marks)
+#     c = my_count(*marks)
+#     res = (b/c)
+#     return res
+
+# def highest_mark(*marks):
+#     first_max = 0
+#     for char in marks:
+#         if char>first_max:
+#             first_max= char
+#     return first_max
+
+
+# def lowest_max(*marks):
+#     lowest_maxs = marks[0]
+#     for char in marks:
+#         if lowest_maxs>char:
+#             lowest_maxs = char
+#     return lowest_maxs
+
+
+    
+
+# def marks_analyzer(student_name, *marks):
+#     print(f"Name : {student_name}")
+    
+#     tol= my_total(*marks)
+#     print(f"Total Marks  : {tol}")
+    
+#     avg = my_average(*marks)
+#     print(f"Average : {avg}")
+    
+#     high = highest_mark(*marks)
+#     print(f"Highest Marks : {high}")
+    
+#     low = lowest_max(*marks)
+#     print(f"Lowest Marks : {low}")
+    
+#     number = my_count(*marks)
+#     print(f"No of Subjects : {number}")
+    
+# marks_analyzer("Bhavani", 85, 90, 78, 92, 88)
