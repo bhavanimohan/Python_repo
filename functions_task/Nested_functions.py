@@ -215,12 +215,18 @@
 # calc_price("Pen", 100, discount=0)
 # calc_price("Bag", 500, 20, 0)
 
-def build_profile(*tags, **info):
-    print("Tags:", tags)
-    for key, value in info.items():
-        print(f"{key} -> {value}") 
-    return len(tags) + len(info)
+# def build_profile(*tags, **info):
+#     print("Tags:", tags)
+#     for key, value in info.items():
+#         print(f"{key} -> {value}") 
+#     return len(tags) + len(info)
 
-result = build_profile("admin", "verified", name="Zara", age=25) 
-print("Total fields:", result)
+# result = build_profile("admin", "verified", name="Zara", age=25) 
+# print("Total fields:", result)
 
+
+# count=int(input("Enter the number : "))
+
+# for char in range(1,11):
+#     print(f"{count} * {char} = {char*count}")
+    
