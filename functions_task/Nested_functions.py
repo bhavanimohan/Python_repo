@@ -225,8 +225,8 @@
 # print("Total fields:", result)
 
 
-# count=int(input("Enter the number : "))
+count=int(input("Enter the number : "))
 
-# for char in range(1,11):
-#     print(f"{count} * {char} = {char*count}")
+for char in range(1,11):
+    print(f"{count} * {char} = {char*count}")
     
