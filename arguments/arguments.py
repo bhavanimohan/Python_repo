@@ -133,16 +133,16 @@
 #     return res
 # print(my_upper("hello world"))
 
-def my_index(lst,num):
-    count = 0
-    for char in lst:
-        if char == num:
-            count+=1
-            break
+# def my_index(lst,num):
+#     count = 0
+#     for char in lst:
+#         if char == num:
+#             count+=1
+#             break
             
-    else:
-        return "-1"
+#     else:
+#         return "-1"
             
-    return count
-print(my_index([2,3,4,5,6,1,2],88))
+#     return count
+# print(my_index([2,3,4,5,6,1,2],88))
         
