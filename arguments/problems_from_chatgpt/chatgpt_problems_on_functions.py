@@ -37,14 +37,39 @@
 # print(f"Special: {special}")
 
 
-def second_largest(numbers):
-    first = 0
-    second = 0
-    for char in numbers:
-        if char>first:
-            second = first
-            first = char
-        if char>second and char!= first:
-            second = char
-    return second
-print(second_largest([1,2,3,4,5]))
+# def second_largest(numbers):
+#     first = 0
+#     second = 0
+#     for char in numbers:
+#         if char>first:
+#             second = first
+#             first = char
+#         if char>second and char!= first:
+#             second = char
+#     return second
+# print(second_largest([1,2,3,4,5]))
+
+# def remove_duplicates(*numbers):
+#     empty_list = []
+#     for char in numbers:
+#         if char not in empty_list:
+#             empty_list.append(char)
+        
+#     return empty_list
+# print(remove_duplicates(1,2,3,1,2,3,4,5,6))
+
+def analyze_number(n):
+    res = ""
+    if n > 0 and n % 2 == 0:
+        res = "Positive Even"
+    elif n>0 and n%2 != 0:
+        res = "Positive Odd"
+    elif n<0 and n % 2 == 0:
+        res = "Negative Even"
+    elif n<0 and n%2!= 0:
+        res = "Negative Odd"
+    else:
+        res = "Zero"
+    return res
+print(analyze_number(-7))
+
