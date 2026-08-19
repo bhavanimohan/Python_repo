@@ -66,10 +66,24 @@
 #     return count
 # print(fibonacci(6))
 
-def sum_of_digits(n):
-    count =0
-    if n<10:
-        return n
-    count+=n%10 +sum_of_digits(n//10)
+# def sum_of_digits(n):
+#     count =0
+#     if n<10:
+#         return n
+#     count+=n%10 +sum_of_digits(n//10)
+#     return count
+# print(sum_of_digits(1234))
+
+# def power(base, exp):
+#     count =0
+#     if exp ==0:
+#         return 1
+#     count =  base * power(base, exp - 1)
+#     return count
+# print(power(2,5))
+
+def reverse_string(s):
+    count = ""
+    count = reverse_string(s[1:]) + s[0]
     return count
-print(sum_of_digits(1234))
+print(reverse_string("HELLO"))
