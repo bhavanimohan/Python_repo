@@ -34,3 +34,13 @@ print(a([1,2,3,4,5,6]))
 
 a = lambda numbers : list(map(lambda x: x ** 2, numbers))
 print(a([1,2,3,4]))
+
+from functools import reduce;
+a = lambda numbers : reduce(lambda a, b: a + b, numbers)
+print(a([1, 2, 3, 4, 5]))
+
+a = lambda  data : sorted(data, key=lambda item: item[1])
+print(a([('A', 88), ('B', 45), ('C', 67)]))
+
+a =  lambda x : "True" if (x % 3 == 0 and x % 5 == 0) else "False"
+print(a(30))
