@@ -83,7 +83,8 @@
 # print(power(2,5))
 
 def reverse_string(s):
-    count = ""
-    count = reverse_string(s[1:]) + s[0]
-    return count
+    if s == "":
+        return s
+    return reverse_string(s[1:]) + s[0]
+     
 print(reverse_string("HELLO"))
