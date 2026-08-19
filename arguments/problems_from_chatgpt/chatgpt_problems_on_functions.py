@@ -82,9 +82,18 @@
 #     return count
 # print(frequency([1,2,3,4,5,3,2,1,1,2,3]))
 
-#yesturday's class lamda just a re-cap
-sums = lambda a,b : a+b
-print(sums(2,3))
-#if else condtional statements checking 
-even = lambda a : "Even" if a % 2 == 0 else "Odd"
-print(even(9))
+#yesterday's class lamda just a re-cap
+# sums = lambda a,b : a+b
+# print(sums(2,3))
+# #if else condtional statements checking 
+# even = lambda a : "Even" if a % 2 == 0 else "Odd"
+# print(even(9))
+
+
+def factoiral(num):
+    count = 1
+    while(num>0):
+        count*=num
+        num-=1
+    return count
+print(factoiral(5))
