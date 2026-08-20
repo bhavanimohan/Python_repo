@@ -16,7 +16,6 @@
 # }
 
 
-
 # num1 = int(input("Enter the number : "))
 # num2 = int(input("Enter the number : "))
 # op_function = input("Enter the opeartor function : ")
@@ -37,17 +36,23 @@
 # number=[1,2,3,4,5,6]
 # res = map(sq,number)
 # print(list(res))
-numbers = [1,2,3,4,5]
-a = list(map(lambda x : x+5 ,numbers))
-print(a)
+
+# numbers = [1,2,3,4,5]
+# a = list(map(lambda x : x+5 ,numbers))
+# print(a)
+
+# names = ["anu","nani","sunny"]
+# a = list(map(lambda x : x.upper(),names))
+# print(a)
+
+# def convt_upper(names):
+#     return names.upper()
+
+# names = ["anu","nani"]
+# res = list(map(convt_upper,names))
+# print(res)
 
 names = ["anu","nani","sunny"]
-a = list(map(lambda x : x.upper(),names))
+a = list(map(lambda x : x[:2].upper(),names))
 print(a)
 
-def convt_upper(names):
-    return names.upper()
-
-names = ["anu","nani"]
-res = list(map(convt_upper,names))
-print(res)
