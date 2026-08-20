@@ -37,6 +37,12 @@
 # res = map(sq,number)
 # print(list(res))
 
+def cube(x):
+    return x ** 3
+numbers = [2,3,4,5]
+res = list(map(cube,numbers))
+print(res)
+
 # numbers = [1,2,3,4,5]
 # a = list(map(lambda x : x+5 ,numbers))
 # print(a)
@@ -51,6 +57,8 @@
 # names = ["anu","nani"]
 # res = list(map(convt_upper,names))
 # print(res)
+
+
 
 names = ["anu","nani","sunny"]
 a = list(map(lambda x : x[:2].upper(),names))
