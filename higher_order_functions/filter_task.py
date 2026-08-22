@@ -60,8 +60,11 @@
 # Input = [{'user': 'a', 'active': True}, {'user': 'b', 'active': False}]
 # print(list(filter(lambda x : x["active"] == True , Input)))
 
-Input = [{'name': 'Asha', 'marks': 35}, {'name': 'Ravi', 'marks': 55}]
-print(list(filter(lambda x : x["marks"] >= 40 , Input)))
+# Input = [{'name': 'Asha', 'marks': 35}, {'name': 'Ravi', 'marks': 55}]
+# print(list(filter(lambda x : x["marks"] >= 40 , Input)))
 
-Input = {'a': 1, 'b': 2, 'c': 3, 'd': 4}
-print(list(filter(lambda x : x[1] % 2 ,Input.items())))
+# Input = {'a': 1, 'b': 2, 'c': 3, 'd': 4}
+# print(list(filter(lambda x : x[1] % 2 ,Input.items())))
+
+Input = {'sun': 1, 'moon': 2, 'star': 3, 'sky': 4}
+print(list(filter(lambda x :  x[0].startswith("s"),Input.items())))
