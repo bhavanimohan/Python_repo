@@ -66,21 +66,35 @@
 # Input = {'a': 1, 'b': 2, 'c': 3, 'd': 4}
 # print(list(filter(lambda x : x[1] % 2 ,Input.items())))
 
-Input = {'sun': 1, 'moon': 2, 'star': 3, 'sky': 4}
-print(list(filter(lambda x :  x[0].startswith("s"),Input.items())))
+# Input = {'sun': 1, 'moon': 2, 'star': 3, 'sky': 4}
+# print(list(filter(lambda x :  x[0].startswith("s"),Input.items())))
 
-Input = {'pen': 20, 'watch': 1500, 'bag': 450, 'pencil': 5}
-print(list(filter(lambda x : x[1] > 100 ,Input.items())))
+# Input = {'pen': 20, 'watch': 1500, 'bag': 450, 'pencil': 5}
+# print(list(filter(lambda x : x[1] > 100 ,Input.items())))
 
-Input = [{'name': 'A', 'age': 20, 'city': 'Delhi'},
-{'name': 'B', 'age': 17, 'city': 'Delhi'},
-{'name': 'C', 'age': 22, 'city': 'Pune'}]
-# Expected Output: [{'name': 'A', 'age': 20, 'city': 'Delhi'}]
+# Input = [{'name': 'A', 'age': 20, 'city': 'Delhi'},
+# {'name': 'B', 'age': 17, 'city': 'Delhi'},
+# {'name': 'C', 'age': 22, 'city': 'Pune'}]
 
-print(list(filter(lambda x : x["age"] > 18 and x["city"] == "Delhi",Input )))
 
-Input = {'a': 1, 'b': None, 'c': 3, 'd': None}
-print(list(filter(lambda x : x[1] != None , Input.items())))
+# print(list(filter(lambda x : x["age"] > 18 and x["city"] == "Delhi",Input )))
 
-Input  = {'a': 'hello', 'b': 5, 'c': 'world', 'd': 3.5}
-print(list(filter(lambda x : isinstance(x[1] , str), Input.items())))
+# Input = {'a': 1, 'b': None, 'c': 3, 'd': None}
+# print(list(filter(lambda x : x[1] != None , Input.items())))
+
+# Input  = {'a': 'hello', 'b': 5, 'c': 'world', 'd': 3.5}
+# print(list(filter(lambda x : isinstance(x[1] , str), Input.items())))
+
+# Input = [{'item': 'Pen', 'stock': 0}, {'item': 'Bag', 'stock': 12}]
+# print(list(filter(lambda x : x["stock"] != 0 ,Input)))
+
+# print("----------------------------------- SECTION - B ---------------------------------")
+from functools import reduce
+
+Input = [1, 2, 3, 4, 5, 6]
+
+b = filter(lambda x: x % 2 == 0, Input)
+c = map(lambda x: x ** 2, b)
+d = reduce(lambda x, y: x + y, c)
+
+print(d)
