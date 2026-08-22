@@ -81,3 +81,6 @@ print(list(filter(lambda x : x["age"] > 18 and x["city"] == "Delhi",Input )))
 
 Input = {'a': 1, 'b': None, 'c': 3, 'd': None}
 print(list(filter(lambda x : x[1] != None , Input.items())))
+
+Input  = {'a': 'hello', 'b': 5, 'c': 'world', 'd': 3.5}
+print(list(filter(lambda x : isinstance(x[1] , str), Input.items())))
