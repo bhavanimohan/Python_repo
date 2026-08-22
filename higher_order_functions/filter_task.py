@@ -57,5 +57,11 @@
 
 # print(list(filter(lambda x : x["salary"]>50000 ,Input)))
 
-Input = [{'user': 'a', 'active': True}, {'user': 'b', 'active': False}]
-print(list(filter(lambda x : x["active"] == True , Input)))
+# Input = [{'user': 'a', 'active': True}, {'user': 'b', 'active': False}]
+# print(list(filter(lambda x : x["active"] == True , Input)))
+
+Input = [{'name': 'Asha', 'marks': 35}, {'name': 'Ravi', 'marks': 55}]
+print(list(filter(lambda x : x["marks"] >= 40 , Input)))
+
+Input = {'a': 1, 'b': 2, 'c': 3, 'd': 4}
+print(list(filter(lambda x : x[1] % 2 ,Input.items())))
