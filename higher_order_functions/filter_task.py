@@ -55,4 +55,4 @@ Input= [{'name': 'Ravi', 'salary': 60000},
 {'name': 'Anu', 'salary': 40000}
 ]
 
-print(list(filter(lambda x : x[1]>50000 ,Input)))
+print(list(filter(lambda x : x["salary"]>50000 ,Input)))
