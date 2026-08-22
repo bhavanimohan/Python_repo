@@ -68,3 +68,16 @@
 
 Input = {'sun': 1, 'moon': 2, 'star': 3, 'sky': 4}
 print(list(filter(lambda x :  x[0].startswith("s"),Input.items())))
+
+Input = {'pen': 20, 'watch': 1500, 'bag': 450, 'pencil': 5}
+print(list(filter(lambda x : x[1] > 100 ,Input.items())))
+
+Input = [{'name': 'A', 'age': 20, 'city': 'Delhi'},
+{'name': 'B', 'age': 17, 'city': 'Delhi'},
+{'name': 'C', 'age': 22, 'city': 'Pune'}]
+# Expected Output: [{'name': 'A', 'age': 20, 'city': 'Delhi'}]
+
+print(list(filter(lambda x : x["age"] > 18 and x["city"] == "Delhi",Input )))
+
+Input = {'a': 1, 'b': None, 'c': 3, 'd': None}
+print(list(filter(lambda x : x[1] != None , Input.items())))
