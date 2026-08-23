@@ -117,10 +117,57 @@ Input = [{'name': 'A', 'active': True, 'salary': 30000},
 b = (filter(lambda x : x["active"] == True , Input))
 c = map(lambda x : x["salary"],b)
 d= reduce(lambda x,y : x+y,c)
+
 print(d)
 
 Input = [1, 2, 3, 4, 5]
 b = filter(lambda x : x % 2 != 0 , Input)
 c = map(lambda x : x** 3,b)
 d = reduce(lambda x,y : x*y,c)
+
 print(d)
+
+Input = [
+    {'item': 'Pen', 'stock': 0, 'price': 10},
+    {'item': 'Bag', 'stock': 5, 'price': 450}
+]
+
+b = filter(lambda x : x["stock"]> 0 , Input)
+c = map(lambda x : x["price"],b)
+d = reduce(lambda x,y : x+y,c)
+
+print(d)
+
+Input = ['madam', 'hello', 'level', 'world', 'racecar']
+
+b = filter(lambda x : x == x[::-1] , Input)
+c = map(lambda x : len(x),b)
+d = reduce(lambda x ,y: max(x,y),c)
+print(d)
+
+Input = [('Ravi', 60), ('Anu', 45), ('Kiran', 55)]
+
+b = filter(lambda x : x[1]>50 , Input)
+c = map(lambda x : str(x[0])+": "+str(x[1]),b)
+
+print(", ".join(c))
+
+Input = [1, 3, 4, 6, 7, 9]
+
+b = filter(lambda x : x % 3 == 0 , Input)
+c = map(lambda x : -x,b)
+d = reduce(lambda x,y : x+y,c)
+
+print(d)
+
+Input = [
+    {'name': 'A', 'city': 'Delhi', 'age': 30},
+    {'name': 'B', 'city': 'Pune', 'age': 40},
+    {'name': 'C', 'city': 'Delhi', 'age': 26}
+]
+count=0
+b = filter(lambda x : x["city"] =="Delhi" , Input)
+c = list(map(lambda x : x["age"],b))
+r = len(c)
+d = reduce(lambda x,y: x+y,c)
+print(d/r)
