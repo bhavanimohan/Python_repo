@@ -91,10 +91,36 @@
 # print("----------------------------------- SECTION - B ---------------------------------")
 from functools import reduce
 
-Input = [1, 2, 3, 4, 5, 6]
+# Input = [1, 2, 3, 4, 5, 6]
 
-b = filter(lambda x: x % 2 == 0, Input)
-c = map(lambda x: x ** 2, b)
-d = reduce(lambda x, y: x + y, c)
+# b = filter(lambda x: x % 2 == 0, Input)
+# c = map(lambda x: x ** 2, b)
+# d = reduce(lambda x, y: x + y, c)
 
+# print(d)
+
+Input = ['hi', 'python', 'go', 'coding']
+b = list(filter(lambda x : (len(x.upper())>3),Input))
+print(list(map(lambda x : x.upper() , b)))
+
+Input = [('Asha', 35), ('Ravi', 55), ('Sana', 40)]
+
+b = (filter(lambda x : x[1]>=40 , Input))
+c = map(lambda x : x[1],b)
+d= reduce(lambda x,y : x+y,c)
+print(d)
+
+Input = [{'name': 'A', 'active': True, 'salary': 30000},
+{'name': 'B', 'active': False, 'salary': 50000},
+{'name': 'C', 'active': True, 'salary': 40000}]
+
+b = (filter(lambda x : x["active"] == True , Input))
+c = map(lambda x : x["salary"],b)
+d= reduce(lambda x,y : x+y,c)
+print(d)
+
+Input = [1, 2, 3, 4, 5]
+b = filter(lambda x : x % 2 != 0 , Input)
+c = map(lambda x : x** 3,b)
+d = reduce(lambda x,y : x*y,c)
 print(d)
