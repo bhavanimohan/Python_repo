@@ -1,3 +1,4 @@
+# print("--------------------------------------- SECTION - A -----------------------------------------------------")
 # Input= [(2, 'a'), (3, 'b'), (4, 'c'), (5, 'd')]
 # print(list(filter(lambda x : x[0] % 2 ==0 , Input)))
 
@@ -89,85 +90,102 @@
 # print(list(filter(lambda x : x["stock"] != 0 ,Input)))
 
 # print("----------------------------------- SECTION - B ---------------------------------")
-from functools import reduce
+# from functools import reduce
 
-# Input = [1, 2, 3, 4, 5, 6]
+# # Input = [1, 2, 3, 4, 5, 6]
 
-# b = filter(lambda x: x % 2 == 0, Input)
-# c = map(lambda x: x ** 2, b)
-# d = reduce(lambda x, y: x + y, c)
+# # b = filter(lambda x: x % 2 == 0, Input)
+# # c = map(lambda x: x ** 2, b)
+# # d = reduce(lambda x, y: x + y, c)
+
+# # print(d)
+
+# Input = ['hi', 'python', 'go', 'coding']
+# b = list(filter(lambda x : (len(x.upper())>3),Input))
+# print(list(map(lambda x : x.upper() , b)))
+
+# Input = [('Asha', 35), ('Ravi', 55), ('Sana', 40)]
+
+# b = (filter(lambda x : x[1]>=40 , Input))
+# c = map(lambda x : x[1],b)
+# d= reduce(lambda x,y : x+y,c)
+# print(d)
+
+# Input = [{'name': 'A', 'active': True, 'salary': 30000},
+# {'name': 'B', 'active': False, 'salary': 50000},
+# {'name': 'C', 'active': True, 'salary': 40000}]
+
+# b = (filter(lambda x : x["active"] == True , Input))
+# c = map(lambda x : x["salary"],b)
+# d= reduce(lambda x,y : x+y,c)
 
 # print(d)
 
-Input = ['hi', 'python', 'go', 'coding']
-b = list(filter(lambda x : (len(x.upper())>3),Input))
-print(list(map(lambda x : x.upper() , b)))
+# Input = [1, 2, 3, 4, 5]
+# b = filter(lambda x : x % 2 != 0 , Input)
+# c = map(lambda x : x** 3,b)
+# d = reduce(lambda x,y : x*y,c)
 
-Input = [('Asha', 35), ('Ravi', 55), ('Sana', 40)]
+# print(d)
 
-b = (filter(lambda x : x[1]>=40 , Input))
-c = map(lambda x : x[1],b)
-d= reduce(lambda x,y : x+y,c)
-print(d)
+# Input = [
+#     {'item': 'Pen', 'stock': 0, 'price': 10},
+#     {'item': 'Bag', 'stock': 5, 'price': 450}
+# ]
 
-Input = [{'name': 'A', 'active': True, 'salary': 30000},
-{'name': 'B', 'active': False, 'salary': 50000},
-{'name': 'C', 'active': True, 'salary': 40000}]
+# b = filter(lambda x : x["stock"]> 0 , Input)
+# c = map(lambda x : x["price"],b)
+# d = reduce(lambda x,y : x+y,c)
 
-b = (filter(lambda x : x["active"] == True , Input))
-c = map(lambda x : x["salary"],b)
-d= reduce(lambda x,y : x+y,c)
+# print(d)
 
-print(d)
+# Input = ['madam', 'hello', 'level', 'world', 'racecar']
 
-Input = [1, 2, 3, 4, 5]
-b = filter(lambda x : x % 2 != 0 , Input)
-c = map(lambda x : x** 3,b)
-d = reduce(lambda x,y : x*y,c)
+# b = filter(lambda x : x == x[::-1] , Input)
+# c = map(lambda x : len(x),b)
+# d = reduce(lambda x ,y: max(x,y),c)
+# print(d)
 
-print(d)
+# Input = [('Ravi', 60), ('Anu', 45), ('Kiran', 55)]
 
-Input = [
-    {'item': 'Pen', 'stock': 0, 'price': 10},
-    {'item': 'Bag', 'stock': 5, 'price': 450}
-]
+# b = filter(lambda x : x[1]>50 , Input)
+# c = map(lambda x : str(x[0])+": "+str(x[1]),b)
 
-b = filter(lambda x : x["stock"]> 0 , Input)
-c = map(lambda x : x["price"],b)
-d = reduce(lambda x,y : x+y,c)
+# print(", ".join(c))
 
-print(d)
+# Input = [1, 3, 4, 6, 7, 9]
 
-Input = ['madam', 'hello', 'level', 'world', 'racecar']
+# b = filter(lambda x : x % 3 == 0 , Input)
+# c = map(lambda x : -x,b)
+# d = reduce(lambda x,y : x+y,c)
 
-b = filter(lambda x : x == x[::-1] , Input)
-c = map(lambda x : len(x),b)
-d = reduce(lambda x ,y: max(x,y),c)
-print(d)
+# print(d)
 
-Input = [('Ravi', 60), ('Anu', 45), ('Kiran', 55)]
+# Input = [
+#     {'name': 'A', 'city': 'Delhi', 'age': 30},
+#     {'name': 'B', 'city': 'Pune', 'age': 40},
+#     {'name': 'C', 'city': 'Delhi', 'age': 26}
+# ]
+# count=0
+# b = filter(lambda x : x["city"] =="Delhi" , Input)
+# c = list(map(lambda x : x["age"],b))
+# r = len(c)
+# d = reduce(lambda x,y: x+y,c)
+# print(d/r)
 
-b = filter(lambda x : x[1]>50 , Input)
-c = map(lambda x : str(x[0])+": "+str(x[1]),b)
 
-print(", ".join(c))
+def funct_even():
+    for char in range(1,5001):
+        if char % 2 == 0:
+            
+            yield char
+            
+       
+            
+res = funct_even()   
 
-Input = [1, 3, 4, 6, 7, 9]
-
-b = filter(lambda x : x % 3 == 0 , Input)
-c = map(lambda x : -x,b)
-d = reduce(lambda x,y : x+y,c)
-
-print(d)
-
-Input = [
-    {'name': 'A', 'city': 'Delhi', 'age': 30},
-    {'name': 'B', 'city': 'Pune', 'age': 40},
-    {'name': 'C', 'city': 'Delhi', 'age': 26}
-]
-count=0
-b = filter(lambda x : x["city"] =="Delhi" , Input)
-c = list(map(lambda x : x["age"],b))
-r = len(c)
-d = reduce(lambda x,y: x+y,c)
-print(d/r)
+print(next(res))
+print(next(res))
+print(next(res))
+      
+    
