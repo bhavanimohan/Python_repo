@@ -133,6 +133,7 @@
 # a = list(map( new ,products))
 # print(a)
 
+
 a = ["nani","rajesh","jai","suresh","naresh"]
 b = list(filter(lambda x : len(x) > 4 , a))
 print(b)
@@ -150,4 +151,3 @@ print(list(filter(lambda x : x<0 ,a )))
 
 a = [1,-8,-4,7,8,5,-10,-6]
 print(list(filter(lambda x : x>0 ,a )),list(filter(lambda x : x<0 ,a )))
-
