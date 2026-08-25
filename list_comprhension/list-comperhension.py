@@ -16,3 +16,20 @@ print(res)
 
 res = [i[0] for i in names]
 print(res)
+
+res = [i.title() for i in names]
+print(res)
+
+res = [i[-1] for i in names]
+print(res)
+
+numss = [1,2,3,4,5,6]
+res = [i+10 for i in numss]
+print(res)
+
+
+res = [i for i in range(10,0,-1)]
+print(res)
+
+sq = [i**3 for i in range(10,20)]
+print(sq)
