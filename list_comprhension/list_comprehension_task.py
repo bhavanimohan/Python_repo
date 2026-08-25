@@ -110,3 +110,26 @@ print(result)
 words = ["apple", "ant", "animal", "ball", "angle", "cat"]
 result = [w for w in words if w.startswith("a") and len(w) > 3]
 print(result)
+
+words = ["python", "java", "react", "javascript", "html", "css"]
+result = [w.upper() for w in words if len(w) > 4]
+print(result)
+
+students = [
+{"name": "Ram", "marks": 80},
+{"name": "Sam", "marks": 35},
+{"name": "Raj", "marks": 90},
+{"name": "John", "marks": 45}
+]
+names = [s["name"] for s in students]
+print(names)
+
+marks = [s["marks"] for s in students]
+print(marks)
+
+passed = [s["name"] for s in students if s["marks"] >= 40]
+print(passed)
+
+top_students = [s["name"] for s in students if s["marks"] > 75]
+print(top_students)
+
