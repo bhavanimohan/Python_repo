@@ -220,3 +220,73 @@ b =[4, 5, 6, 7,8]
 
 c = {i for i in a for j in b if i == j}
 print(c)
+
+
+num = ["cat", "dog", "apple","banana", "fig"]
+res = {len(i) for i in num}
+print(res)
+
+num = [8, 12, 15, 16, 20, 21, 24]
+res = {i for i in num if i % 4 == 0}
+print(res)
+
+res = {i : i**2 for i in range(1,6)}
+print(res)
+
+res = {i : i**3 for i in range(1,11)}
+print(res)
+
+names = ["python", "java","react"]
+res = {i : len(i) for i in names}
+print(res)
+
+res = {i: "Even" if i % 2 == 0 else "Odd" for i in range(1,11)}
+
+print(res)
+
+
+keys = ["a", "b", "c"]
+values =[1, 2, 3]
+res = {i : j for i in keys for j in values}
+print(res)
+
+prices = {"apple": 40, "banana": 60, "mango": 90, "grape": 30}
+res = {i: prices[i] for i in prices if   prices[i]> 50}
+print(res)
+
+num= {"a": 1, "b": 2, "c": 3}
+res = {values : keys  for keys,values in num.items()}
+print(res)
+
+num = "abc"
+res = {i : ord((i)) for i in num}
+print(res)
+
+res = { i : i **2  for i in range(1,11) if i % 2 == 0}
+print(res)
+
+pairs = [("a", 1), ("b", 2), ("c", 3)]
+
+result = {key: value for key, value in pairs}
+
+print(result)
+
+original = {"x": 10, "y": 20, "z": 30}
+res = {key: values * 2 for key,values in original.items()}
+print(res)
+
+marks = {"Ram": 80, "Sam": 35, "Raj": 90, "John": 45}
+res = {i : "pass" if marks[i] > 50 else "fail" for i in marks}
+print(res)
+
+num =  ["cat","dog", "fish"]
+res = {i : i.upper() for  i in num}
+print(res)
+
+words = ["apple", "sky", "orange", "gym"]
+result = {word: sum(1 for char in word if char in "aeiou") for word in words}
+print(result)
+
+nums = {"a": 1, "b": 2, "c": 3, "d": 4}
+res = {i:nums[i] for i in nums if nums[i] % 2 == 0}
+print(res)
