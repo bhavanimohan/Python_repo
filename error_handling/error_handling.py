@@ -101,54 +101,78 @@
 # Modify the above program so that a 10% 
 # discount is given when the total bill is above ₹500.
 
-class InSufficientAmountError(Exception):
-    pass
-menu_item = {
-    "briyani" :170,
-    "mutton briyani" :210,
-    "coke" : 50,
-    "meals":120
-}
-try:
-    name = input("Enter dish name  : ")
-    quantity  = int(input("Enter the quantity : "))
-    amount = int(input("Enter the amount : "))
-    item = menu_item[name]
-    total = item * quantity
-    discount = 0
-    actual_amount = total 
-    return_amount = amount - total
-    if actual_amount > 500 :
-        actual_amount = actual_amount*10/100
-    actual_amount
-    if total>amount:
-        raise InSufficientAmountError("Insufficient amount")
+# class InSufficientAmountError(Exception):
+#     pass
+# menu_item = {
+#     "briyani" :170,
+#     "mutton briyani" :210,
+#     "coke" : 50,
+#     "meals":120
+# }
+# try:
+#     name = input("Enter dish name  : ")
+#     quantity  = int(input("Enter the quantity : "))
+#     amount = int(input("Enter the amount : "))
+#     item = menu_item[name]
+#     total = item * quantity
+#     discount = 0
+#     actual_amount = total 
+#     return_amount = amount - total
+#     if actual_amount > 500 :
+#         actual_amount = actual_amount*10/100
+#     actual_amount
+#     if total>amount:
+#         raise InSufficientAmountError("Insufficient amount")
 
 
-except KeyError:
-    print("Enter a valid item from the menu.")
-except ZeroDivisionError:
-    print("Quantity shouldn't be Zero so minimun you need to add one.")
-except ValueError:
-    print("Enter the a valid number.")
-except NameError:
-    print("Enter the valid name or valid number.")   
-except InSufficientAmountError as e:
-    print(e)
-except Exception:
-    print("something happened go back to your code and check it.")
+# except KeyError:
+#     print("Enter a valid item from the menu.")
+# except ZeroDivisionError:
+#     print("Quantity shouldn't be Zero so minimun you need to add one.")
+# except ValueError:
+#     print("Enter the a valid number.")
+# except NameError:
+#     print("Enter the valid name or valid number.")   
+# except InSufficientAmountError as e:
+#     print(e)
+# except Exception:
+#     print("something happened go back to your code and check it.")
 
-else:
-    print(f"Item you selected from the memu : {name}")
-    print(f"The quantity you selected : {quantity}")
-    print(f"Amount you given to waiter : {amount}")
-    print(f"Total amount you need to pay : {total}")
-    print(f"The discount you got on this item : {actual_amount}")
-    print(f"Return amount you got : {return_amount}")
-    print(f"-------------------Payment successful : {total-actual_amount}-----------")
-    print("---------------------------------Happpy shooppingggggg................")
+# else:
+#     print(f"Item you selected from the memu : {name}")
+#     print(f"The quantity you selected : {quantity}")
+#     print(f"Amount you given to waiter : {amount}")
+#     print(f"Total amount you need to pay : {total}")
+#     print(f"The discount you got on this item : {actual_amount}")
+#     print(f"Return amount you got : {return_amount}")
+#     print(f"-------------------Payment successful : {total-actual_amount}-----------")
+#     print("---------------------------------Happpy shooppingggggg................")
     
     
-finally:
-    print("------------------------------------------Visit Again .... ")
+# finally:
+#     print("------------------------------------------Visit Again .... ")
    
+   
+# Write a program where the user enters their age.
+# If age is less than 0 → raise a custom InvalidAgeError
+# If age is between 0 and 17 → print "Not eligible"
+# If age is 18 or above → print "Eligible"   
+class InvalidAgeError(Exception):
+    pass
+
+try:
+    name = input("Enter you name : ")
+    age = int(input("Enter your age : "))
+    if age <0:
+        raise InvalidAgeError("Enter a valid number")
+    if age>=0 and age<=17:
+        print("Not Eligible")
+    if (age>18):
+        print("Eligible")
+except InvalidAgeError as e:
+    print(e)
+else:
+    pass
+    
+
+
