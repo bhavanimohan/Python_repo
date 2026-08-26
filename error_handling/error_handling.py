@@ -6,7 +6,7 @@ menu_item = {
 }
 
 try:
-    name = input("Enter dish name  ")
+    name = input("Enter dish name  : ")
     quantity  = int(input("Enter the quantity : "))
     amount = int(input("Enter the amount : "))
     item = menu_item[name]
@@ -26,6 +26,8 @@ except ZeroDivisionError:
     
 except Exception:
     print("something happened go back to your code and check it.")
+except NameError:
+    print("Enter the valid name or valid number.")
     
         
     
@@ -39,9 +41,9 @@ else:
     print(f"Total amount you need to pay : {total}")
     print(f"The discount you got on this item : {discount}")
     print(f"Return amount you got : {return_amount}")
-    print(f" Payment successful : {actual_amount}")
-    print("Happpy shooppingggggg................")
+    print(f"-------------------Payment successful : {actual_amount}-----------")
+    print("---------------------------------Happpy shooppingggggg................")
     
     
 finally:
-    print("Visit Again .... ")
+    print("------------------------------------------Visit Again .... ")
