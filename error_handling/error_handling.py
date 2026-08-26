@@ -101,7 +101,8 @@
 # Modify the above program so that a 10% 
 # discount is given when the total bill is above ₹500.
 
-
+class InSufficientAmountError(Exception):
+    pass
 menu_item = {
     "briyani" :170,
     "mutton briyani" :210,
@@ -120,6 +121,10 @@ try:
     if actual_amount > 500 :
         actual_amount = actual_amount*10/100
     actual_amount
+    if total>amount:
+        raise InSufficientAmountError("Insufficient amount")
+
+
 except KeyError:
     print("Enter a valid item from the menu.")
 except ZeroDivisionError:
@@ -127,7 +132,9 @@ except ZeroDivisionError:
 except ValueError:
     print("Enter the a valid number.")
 except NameError:
-    print("Enter the valid name or valid number.")    
+    print("Enter the valid name or valid number.")   
+except InSufficientAmountError as e:
+    print(e)
 except Exception:
     print("something happened go back to your code and check it.")
 
@@ -144,5 +151,4 @@ else:
     
 finally:
     print("------------------------------------------Visit Again .... ")
-   
    
