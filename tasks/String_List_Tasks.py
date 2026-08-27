@@ -56,19 +56,28 @@
 # print(empty_list)
 
     
-String = "thisisaprogrammingtest"
-Patterns = ["is", "program", "test", "python"]
-res = []
+# String = "thisisaprogrammingtest"
+# Patterns = ["is", "program", "test", "python"]
+# res = []
 
-for i in Patterns:
-    if i in String:
+# for i in Patterns:
+#     if i in String:
         
-        res +=[len(i)]
+#         res +=[len(i)]
         
-    else:
-        res+= [-1]
+#     else:
+#         res+= [-1]
         
     
-print(res)
+# print(res)
 
  
+ 
+Input = ["listen", "silent", "hello", "evil", "vile","nani","anni"]
+empty_list = []
+for i in Input:
+    for j+1 in Input:
+        
+        
+            
+            
