@@ -157,22 +157,24 @@
 # If age is less than 0 → raise a custom InvalidAgeError
 # If age is between 0 and 17 → print "Not eligible"
 # If age is 18 or above → print "Eligible"   
-class InvalidAgeError(Exception):
-    pass
 
-try:
-    name = input("Enter you name : ")
-    age = int(input("Enter your age : "))
-    if age <0:
-        raise InvalidAgeError("Enter a valid number")
-    if age>=0 and age<=17:
-        print("Not Eligible")
-    if (age>18):
-        print("Eligible")
-except InvalidAgeError as e:
-    print(e)
-else:
-    pass
+# class InvalidAgeError(Exception):
+#     pass
+
+# try:
+#     name = input("Enter you name : ")
+#     age = int(input("Enter your age : "))
+#     if age <0:
+#         raise InvalidAgeError("Enter a valid number")
+#     if age>=0 and age<=17:
+#         print("Not Eligible")
+#     if (age>18):
+#         print("Eligible")
+# except InvalidAgeError as e:
+#     print(e)
+# else:
+#     pass
     
+
 
 
