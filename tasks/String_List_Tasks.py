@@ -73,11 +73,15 @@
 
  
  
-Input = ["listen", "silent", "hello", "evil", "vile","nani","anni"]
-empty_list = []
+Input = ["bella", "label", "roller"]
+res = []
 for i in Input:
-    for j+1 in Input:
-        
-        
+    for j in i:
+        if j  in i:
+            res.append(j)
+            
+print(res)
+
+    
             
             
