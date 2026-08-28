@@ -74,12 +74,13 @@
  
  
 Input = ["bella", "label", "roller"]
+
 res = []
-for i in Input:
-    for j in i:
-        if j  in i:
-            res.append(j)
-            
+
+for j in Input[0]:
+    if j in Input[1] and j in Input[2]:
+        res.append(j)
+
 print(res)
 
     
