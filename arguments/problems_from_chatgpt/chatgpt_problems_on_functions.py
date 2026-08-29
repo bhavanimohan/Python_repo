@@ -89,11 +89,3 @@
 # even = lambda a : "Even" if a % 2 == 0 else "Odd"
 # print(even(9))
 
-
-def factoiral(num):
-    count = 1
-    while(num>0):
-        count*=num
-        num-=1
-    return count
-print(factoiral(5))

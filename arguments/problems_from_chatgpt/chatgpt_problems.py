@@ -297,3 +297,24 @@
     
 # marks_analyzer("Bhavani", 85, 90, 78, 92, 88)
 
+def remove_duplicates(numbers):
+    empty_list = []
+
+    for i in numbers:
+        if i not in empty_list:
+            empty_list.append(i)
+
+    return empty_list
+
+print(remove_duplicates([2, 3, 4, 2, 3, 4, 5, 6, 7]))
+
+def remove_duplicates(numbers):
+    result = []
+
+    for num in numbers:
+        if num not in result:
+            result.append(num)
+
+    return result
+
+print(remove_duplicates([2, 3, 4, 2, 3, 4, 5, 6, 7]))
