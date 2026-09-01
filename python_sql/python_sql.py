@@ -31,3 +31,10 @@ cursor = connection.cursor()
 a = cursor.execute(query)
 res = cursor.fetchall()
 print(res)
+
+query2 = "insert into emps(name,age,salary,location) values (%s,%s,%s,%s)"
+values = ("chaitu",)
+cursor = connection.cursor()
+c = cursor.execute(query2)
+res2 = cursor.fetchall()
+print(res2)
