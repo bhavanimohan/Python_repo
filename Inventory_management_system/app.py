@@ -9,7 +9,9 @@ while True:
     if choice == "1":
         get_product_details()
     if choice == "2":
-        break
+        connection.close()
+        pass
+
     if choice not in ["1", "2"]:
         print("Invalid choice. Please try again.")
-connection.close()
+        break
