@@ -36,3 +36,11 @@ def update_product(product_id, name, category, price, quantity, supplier):
     print("Product updated successfully!")
     cursor.close()
     connection.close()
+def delete_product(product_id):
+    connection = my_connection()
+    cursor = connection.cursor()
+    cursor.execute("DELETE FROM products WHERE id=%s", (product_id,))
+    connection.commit()
+    print("Product deleted successfully!")
+    cursor.close()
+    connection.close()
