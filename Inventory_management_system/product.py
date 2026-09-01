@@ -28,3 +28,11 @@ def add_product(name,category,price,quantity,supplier):
     print("Product added successfully!")
     cursor.close()
     connection.close()
+def update_product(product_id, name, category, price, quantity, supplier):
+    connection = my_connection()
+    cursor = connection.cursor()
+    cursor.execute("UPDATE products SET name=%s, category=%s, price=%s, quantity=%s, supplier=%s WHERE id=%s", (name, category, price, quantity, supplier, product_id))
+    connection.commit()
+    print("Product updated successfully!")
+    cursor.close()
+    connection.close()
