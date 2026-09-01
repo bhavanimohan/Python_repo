@@ -1,5 +1,6 @@
 from database import my_connection
-from product import get_product_details
+from product import get_product_details, update_product
+
 connection = my_connection()
 print("Connection established successfully!")
 while True:
@@ -9,9 +10,13 @@ while True:
     if choice == "1":
         get_product_details()
     if choice == "2":
-        connection.close()
-        pass
+        product_id = int(input("Enter the id to update : ")) 
+        name = input("Enter the name : ") 
+        category = input("Enter the category to update : ") 
+        price = float(input("Enter the price : "))
+        quantity = int(input("Enter the quantity : "))
+        supplier = input("Enter the supplier : ")
+        update_product(product_id, name, category, price, quantity, supplier)
 
-    if choice not in ["1", "2"]:
-        print("Invalid choice. Please try again.")
+    if choice == "3":
         break
