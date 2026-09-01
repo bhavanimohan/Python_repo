@@ -1,5 +1,5 @@
 from database import my_connection
-from product import get_product_details, update_product
+from product import get_product_details, update_product, delete_product
 
 connection = my_connection()
 print("Connection established successfully!")
@@ -19,4 +19,7 @@ while True:
         update_product(product_id, name, category, price, quantity, supplier)
 
     if choice == "3":
+        product_id = int(input("Enter the id to delete : "))
+        delete_product(product_id)
+    if choice == "4":
         break
