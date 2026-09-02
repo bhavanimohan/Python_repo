@@ -1,5 +1,5 @@
 from database import my_connection
-from product import get_product_details, update_product, delete_product
+from product import get_product_details, update_product, delete_product,search_product
 
 connection = my_connection()
 print("Connection established successfully!")
@@ -25,4 +25,5 @@ while True:
         product_id = int(input("Enter the id to delete : "))
         delete_product(product_id)
     if choice == "4":
-        break
+        product_name = input("Enter the product name to search : ")
+        search_product(product_name)
