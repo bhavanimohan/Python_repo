@@ -16,7 +16,7 @@ while True:
     if option == "1":
         get_all_emps()
     if option == "2":
-        name_to_insert=input("Enter the name where you wanna insert : ")
+        name_to_insert=input("Enter the name you wanna insert : ")
         age_to_insert = int(input("Enter the age that wanna insert : "))
         salary_to_insert = float(input("Enter the salary that wanna insert : "))
         location_to_insert= input("Enter the location to insert : ")
@@ -25,8 +25,7 @@ while True:
         
         update_emp()
     if option == "4":
-        name_to_delete = input("Enter the name that you wanna delete : ")
-        del_emp(name_to_delete)
+        del_emp()
     if option == "5":
         break
     
