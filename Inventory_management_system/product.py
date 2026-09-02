@@ -20,6 +20,66 @@ def print_products(products):
         print(f"Quantity   : {product[4]}")
         print(f"Supplier   : {product[5]}")
         print("----------------------------------------")
+def delete_product(product_id):
+    user_selection = int(input("""Enter the number to delete by :
+                               1. ID 
+                               2. Name
+                               3. Category """))  
+    if user_selection == 1:
+        product_id = int(input("Enter the id to delete : "))
+        user_confirmation = input(f"Are you sure you want to delete the product with ID {product_id}? (yes/no): ")
+        if user_confirmation.lower() == "yes":
+            query = "DELETE FROM products WHERE id=%s"
+            values = (product_id)
+            connection = my_connection()
+            cursor = connection.cursor()
+            cursor.execute(query, values)
+            connection.commit()
+            print("Product deleted successfully!")
+            cursor.close()
+            connection.close()
+            print("Product deletion Agreed.")
+        else:
+            print("Product deletion Not Agreed.")
+            return     
+            
+        
+    if user_selection == 2:
+        product_name = input("Enter the name to delete : ")
+        query = "DELETE FROM products WHERE name=%s"
+        values = (product_name)
+        user_confirmation = input(f"Are you sure you want to delete the product with name {product_name}? (yes/no): ")
+        if user_confirmation.lower() == "yes":
+            connection = my_connection()
+            cursor = connection.cursor()
+            cursor.execute(query, values)
+            connection.commit()
+            print("Product deleted successfully!")
+            cursor.close()
+            connection.close()
+        else:
+            print("Product deletion Not Agreed.")
+            return
+        
+    if user_selection == 3:
+        product_category = input("Enter the category to delete : ")
+        query = "DELETE FROM products WHERE category=%s"
+        values = (product_category)
+        user_confirmation = input(f"Are you sure you want to delete the product with category {product_category}? (yes/no): ")
+        if user_confirmation.lower() != "yes":
+            print("Product deletion Agreed.")
+            connection = my_connection()
+            cursor = connection.cursor()
+            cursor.execute("DELETE FROM products WHERE id=%s", (product_id,))
+            connection.commit()
+            print("Product deleted successfully!")
+            cursor.close()
+            connection.close()
+        else:
+            print("Product deletion Not Agreed.")
+            return
+
+        
 def add_product(name,category,price,quantity,supplier):
     connection = my_connection()
     cursor = connection.cursor()
@@ -36,52 +96,8 @@ def update_product(product_id, name, category, price, quantity, supplier):
     print("Product updated successfully!")
     cursor.close()
     connection.close()
-def delete_product(product_id):
-    user_selection = int(input("""Enter the number to delete by :
-                               1. ID 
-                               2. Name
-                               3. Category """))  
-    if user_selection == 1:
-        product_id = int(input("Enter the id to delete : "))
-        query = "DELETE FROM products WHERE id=%s"
-        values = (product_id,)
-        user_confirmation = input(f"Are you sure you want to delete the product with ID {product_id}? (yes/no): ")
-        if user_confirmation.lower() != "yes":
-            print("Product deletion Agreed.")
-            return
-        connection = my_connection()
-        cursor = connection.cursor()
-        cursor.execute(query, values)
-        connection.commit()
-        print("Product deleted successfully!")
-        cursor.close()
-        connection.close()
-    if user_selection == 2:
-        product_name = input("Enter the name to delete : ")
-        query = "DELETE FROM products WHERE name=%s"
-        values = (product_name,)
-        user_confirmation = input(f"Are you sure you want to delete the product with name {product_name}? (yes/no): ")
-        if user_confirmation.lower() != "yes":
-            print("Product deletion Agreed.")
-            return
-        connection = my_connection()
-    cursor = connection.cursor()
-    if user_selection == 3:
-        product_category = input("Enter the category to delete : ")
-        query = "DELETE FROM products WHERE category=%s"
-        values = (product_category,)
-        user_confirmation = input(f"Are you sure you want to delete the product with category {product_category}? (yes/no): ")
-        if user_confirmation.lower() != "yes":
-            print("Product deletion Agreed.")
-            return
-        connection = my_connection()
-    cursor = connection.cursor()
-    cursor.execute("DELETE FROM products WHERE id=%s", (product_id,))
-    connection.commit()
-    print("Product deleted successfully!")
-    cursor.close()
-    connection.close()
-def search_product(product_name):
+
+def search_product():
     user_selection = int(input("""Enter the number to search by : 
                                1. Name 
                                2. Category 

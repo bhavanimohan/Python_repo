@@ -7,7 +7,8 @@ while True:
     print("1. Get product details")
     print("2. Update product")
     print("3. Delete product")
-    print("4. Exit")
+    print("4. Search product")
+    print("5. Exit")
 
     choice = input("Enter your choice: ")
     if choice == "1":
@@ -25,5 +26,7 @@ while True:
         product_id = int(input("Enter the id to delete : "))
         delete_product(product_id)
     if choice == "4":
-        product_name = input("Enter the product name to search : ")
-        search_product(product_name)
+        search_product()
+    if choice == "5":
+        print("Exiting the program.")
+        break
