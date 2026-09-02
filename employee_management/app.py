@@ -22,9 +22,9 @@ while True:
         location_to_insert= input("Enter the location to insert : ")
         inserting(name_to_insert,age_to_insert,salary_to_insert,location_to_insert)
     if option == "3":
-        name_to_update = input("Enter the name that you wanna update it : ")
-        name_to_replace = input("Enter the name where you wanna update it : ")
-        update_emp(name_to_update,name_to_replace)
+        to_update = input("Enter the name that you wanna update it : ")
+        to_replace = input("Enter the name where you wanna update it : ")
+        update_emp(to_update,to_replace)
     if option == "4":
         name_to_delete = input("Enter the name that you wanna delete : ")
         del_emp(name_to_delete)

@@ -5,7 +5,10 @@ connection = my_connection()
 print("Connection established successfully!")
 while True:
     print("1. Get product details")
-    print("2. Exit")
+    print("2. Update product")
+    print("3. Delete product")
+    print("4. Exit")
+
     choice = input("Enter your choice: ")
     if choice == "1":
         get_product_details()
