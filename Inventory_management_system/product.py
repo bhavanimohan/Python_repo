@@ -22,17 +22,17 @@ def print_products(products):
         print("----------------------------------------")
         
         
-def delete_product(product_id):
+def delete_product():
     user_selection = int(input("""Enter the number to delete by :
                                1. ID 
                                2. Name
-                               3. Category """))  
+                               3. Category """)) 
     if user_selection == 1:
         product_id = int(input("Enter the id to delete : "))
         user_confirmation = input(f"Are you sure you want to delete the product with ID {product_id}? (yes/no): ")
         if user_confirmation.lower() == "yes":
             query = "DELETE FROM products WHERE id=%s"
-            values = (product_id)
+            values = (product_id,)
             connection = my_connection()
             cursor = connection.cursor()
             cursor.execute(query, values)
@@ -148,7 +148,11 @@ def search_product():
     user_selection = int(input("""Enter the number to search by : 
                                1. Name 
                                2. Category 
-                               3. Supplier : """))
+                               3. Supplier 
+                               4. Price 
+                               5. Quantity 
+                               6. Price Range
+                               :"""))
     if user_selection == 1:
         name_to_search = input("Enter the name to search : ")
         query = "SELECT * FROM products WHERE name LIKE %s"
@@ -161,13 +165,67 @@ def search_product():
         supplier_to_search = input("Enter the supplier to search : ")
         query = "SELECT * FROM products WHERE supplier LIKE %s"
         values = ('%' + supplier_to_search + '%',)
+    if user_selection == 4:
+        price_to_search = float(input("Enter the price to search : "))
+        query = "SELECT * FROM products WHERE price = %s"
+        values = (price_to_search,)
+    if user_selection == 5:
+        quantity_to_search = int(input("Enter the quantity to search : "))
+        query = "SELECT * FROM products WHERE quantity = %s"
+        values = (quantity_to_search,)
+    if user_selection == 6:
+        min_price_range = float(input("Enter the price range to search (min) : "))
+        max_price_range = float(input("Enter the price range to search (max) : "))
+        query = "SELECT * FROM products WHERE price BETWEEN %s AND %s"
+        values = (min_price_range, max_price_range)
+        
     connection = my_connection()
     cursor = connection.cursor()
     cursor.execute(query, values)
     products = cursor.fetchall()
     if products:
-        print_products(products)
+        print("Products with the same model:")
+        for product in products:
+            print(f"""
+                  ID       :  {product[0]},
+                  Name     :  {product[1]}, 
+                  Category :  {product[2]}, 
+                  Price    :  {product[3]}, 
+                  Quantity :  {product[4]}, 
+                  Supplier :  {product[5]}
+                  """)
+            
+def get_same_products():
+    connection = my_connection()
+    cursor = connection.cursor()
+    cursor.execute("SELECT name, COUNT(*) as count FROM products GROUP BY name HAVING count > 1")
+    same_products = cursor.fetchall()
+    if same_products:
+        print("Products with the same name:")
+        for product in same_products:
+            print(f"Name: {product[0]}, Count: {product[1]}")
     else:
-        print("No products found with the given name.")
+        print("No products with the same name found.")
     cursor.close()
     connection.close()
+def get_same_model_products():
+    user_selection = int(input("""Enter the number to search by : 
+                               1. Name 
+                               2. Category 
+                               3. Supplier :
+                               4. Price :
+                               5. Quantity :"""))
+    if user_selection == 1:
+        name_to_search = input("Enter the name to search : ")
+        query = "SELECT * FROM products WHERE name LIKE %s"
+        values = ('%' + name_to_search + '%',)
+    if user_selection == 2:
+        category_to_search = input("Enter the category to search : ")
+        query = "SELECT * FROM products WHERE category LIKE %s"
+        values = ('%' + category_to_search + '%',)
+    if user_selection == 3:
+        supplier_to_search = input("Enter the supplier to search : ")
+        query = "SELECT * FROM products WHERE supplier LIKE %s"
+        values = ('%' + supplier_to_search + '%',)
+
+    
