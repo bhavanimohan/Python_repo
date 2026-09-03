@@ -236,3 +236,5 @@ def get_same_model_products():
         query = "SELECT * FROM products WHERE quantity = %s"
         values = (quantity_to_search,)
     
+    cursor.execute(query, values)
+    products = cursor.fetchall()
