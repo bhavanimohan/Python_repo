@@ -227,5 +227,12 @@ def get_same_model_products():
         supplier_to_search = input("Enter the supplier to search : ")
         query = "SELECT * FROM products WHERE supplier LIKE %s"
         values = ('%' + supplier_to_search + '%',)
-
+    if user_selection == 4:
+        price_to_search = float(input("Enter the price to search : "))
+        query = "SELECT * FROM products WHERE price = %s"
+        values = (price_to_search,)
+    if user_selection == 5:
+        quantity_to_search = int(input("Enter the quantity to search : "))
+        query = "SELECT * FROM products WHERE quantity = %s"
+        values = (quantity_to_search,)
     
