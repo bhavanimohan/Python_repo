@@ -235,17 +235,11 @@ def get_same_model_products():
         quantity_to_search = int(input("Enter the quantity to search : "))
         query = "SELECT * FROM products WHERE quantity = %s"
         values = (quantity_to_search,)
-    
+    connection = my_connection()
+    cursor = connection.cursor()
     cursor.execute(query, values)
     products = cursor.fetchall()
     if products:
         print("Products with the same model:")
         for product in products:
-            print(f"""
-                  ID       :  {product[0]},
-                  Name     :  {product[1]}, 
-                  Category :  {product[2]}, 
-                  Price    :  {product[3]}, 
-                  Quantity :  {product[4]}, 
-                  Supplier :  {product[5]}
-                  """)
+            break
