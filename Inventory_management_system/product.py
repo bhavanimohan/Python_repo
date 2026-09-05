@@ -239,7 +239,4 @@ def get_same_model_products():
     cursor = connection.cursor()
     cursor.execute(query, values)
     products = cursor.fetchall()
-    if products:
-        print("Products with the same model:")
-        for product in products:
-            break
+    
